@@ -89,7 +89,7 @@ class StorageProxy(object):
 
         docs = {}
         for key, val in iteritems(table):
-            doc_id = int(key)
+            doc_id = key				
             docs[doc_id] = Document(val, doc_id)
 
         return DataProxy(docs, raw_data)
